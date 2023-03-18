@@ -1,0 +1,291 @@
+:root {
+    --white: rgb(228, 228, 228);
+    --background-color: #011f4b;
+    --darker-blue: #003783;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #012964;
+    color: var(--white);
+}
+
+.main {
+    text-align: center;
+}
+
+.fight {
+    width: 500px;
+    height: 250px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin: auto;
+    
+}
+
+.fighter {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.stick {
+    position: absolute;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    height: 100px;
+
+    background: linear-gradient(
+        var(--darker-blue),
+        var(--background-color)
+    );
+
+    padding-top: 10px;
+}
+
+/* -------------------- result -------------- */
+.result {
+    width: 400px;
+    height: 100px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: last baseline;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+
+
+.boxResult {
+    width: 100%;
+    height: 40px;
+
+    margin: 10px auto 10px;
+}
+
+#roundResult {
+    margin-left: -30px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* -------------------- fighter css ------------------ */
+
+.head {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+
+    top: 50px;
+}
+
+.body {
+    width: 3px;
+    background-color: var(--white);
+    height: 70px;
+
+    top: 102px;
+}
+
+.arm1 {
+    width: 2px;
+    height: 28px;
+    background-color: var(--white);
+    transform: rotate(120deg);
+
+    left: 137px;
+}
+
+.forearm1-M {
+    width: 2px;
+    background-color: var(--white);
+    height: 20px;
+
+    top: 112px;
+    left: 148px;
+
+    transform-origin: bottom;    
+    transform: rotate(60deg);
+}
+
+@keyframes wave {
+    10% {
+        transform: rotate(45deg);
+    }
+    20% {
+        transform: rotate(60deg);
+    }
+    30% {
+        transform: rotate(45deg);
+    }
+    40% {
+        transform: rotate(60deg);
+    }
+}
+
+.hand {
+    width: 20px;
+    height: 20px;
+    
+    margin-left: -11px;
+    margin-top: -17px;
+}
+
+.handScissor {
+    width: 20px;
+    height: 20px;
+    
+    margin-left: -10px;
+    margin-top: -17px;
+
+    transform: rotate(90deg);   
+}
+
+.stickShot {
+    transform: rotate(-78deg);
+    
+    position: absolute;
+}
+
+/* computer css */
+
+.computer {
+    width: 70px;
+    height: 50px;
+    border: 2px solid;
+}
+
+.screen {
+    width: 60px;
+    height: 40px;
+    border: 1px solid;
+}
+
+.holder {
+    width: 20px;
+    height: 15px;
+    border: 2px solid;
+    background-color: var(--white);
+
+    top: 150px;
+}
+
+.base {
+    width: 40px;
+    height: 20px;
+    border: 2px solid;
+
+    border-radius: 200px;
+    top: 155px;
+    z-index: -1;
+}
+
+/* ------------- buttons ---------------- */
+
+.btn {
+    width: 70px;
+    height: 40px;
+    border-radius: 50%;
+
+    margin: 10px;
+
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.9) 0 0 8px;
+}
+
+#resetBtn {
+    background-color: var(--darker-blue);
+    font-weight: 600;
+
+    width: 100px;
+
+    color: var(--white);
+    margin-top: 10px;
+}
+
+/* ------------- footer ---------------- */
+
+.modal-container {
+    position: fixed;
+    z-index: 1;
+
+    display: grid;
+    place-items: center;
+
+    top: 0;
+    right: 0;
+    
+    width: 100%;
+    height: 100vh;
+    
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    width: 150px;
+    height: 100px;
+    padding: 15px;
+
+
+    border: 2px solid;
+    border-radius: 10px;
+    text-align: center;
+
+    z-index: 2;
+    background-color: var(--darker-blue);
+}
+
+.modal-show {
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    z-index: 1;
+}
+
+.back {
+    display: none;
+    top: 0;
+    left: 0;    
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--white);
+    opacity: 0.4;
+}
+
+.back-show {
+    display: block;
+}

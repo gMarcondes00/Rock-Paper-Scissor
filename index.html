@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main class="main" id="main">
+        <div class="title">
+            <h1> Rock Paper Scissor </h1>
+            <p>5 ponints to win!</p>
+        </div>
+        <section class="result">
+            <label id="you">You: 
+                <label id="youResult">0</label>
+            </label>
+            <label id="computer">Computer: 
+                <label id="computerResult">0</label>
+            </label>
+        </section>
+        <div class="boxResult center">
+            <p id="roundResult"></p>
+        </div>
+        <section class="fight">
+            <div class="stick-man fighter center">
+                <div class="head stick"></div>
+                <div class="body stick"></div>
+                <div class="arm1 stick"></div>
+                <div class="forearm1-M stick" id="foreArm1">
+                    <div class="stick hand" id="handS">
+                        <label id="stickShot"><i id="stickHand" class=""></i></label>
+                    </div>
+                </div>
+            </div>
+            <div class="stick-comp fighter center">
+                <div class="computer fighter center">
+                    <div class="screen stick center">
+                        <label id="compShot"><i id="compHand" class=""></i></label>
+                    </div>
+                </div>
+                <div class="holder stick"></div>
+                <div class="base stick"></div>
+            </div>
+        </section>
+        <section class="options">
+            <button class="btn" id="rockBtn">ROCK</button>
+            <button class="btn" id="paperBtn">PAPER</button>
+            <button class="btn" id="scissorBtn">SCISSOR</button>
+        </section>
+    </main>
+    <footer class="footer center">
+        <div class="modal-container" id="modal-container">
+            <div class="modal" id="modal">
+                <label id="matchWinner"></label>
+                <p>Jogar de novo?</p>
+                <button id="resetBtn">JOGAR</button>
+            </div>
+        </div>
+        <div id="back" class="back"></div>
+        
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
